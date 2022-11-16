@@ -1,0 +1,23 @@
+.ab {
+color: rgb(0, 0, 0);
+text-decoration: none;
+padding-left: 20px;
+font-weight: 600;
+}
+.footer{
+    position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+    
+.i{
+    padding-left: 20px;
+}
+    
+
+
+.active-link {
+    
+    color: rgb(0, 0, 0);
+}
