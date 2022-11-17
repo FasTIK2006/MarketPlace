@@ -1,5 +1,5 @@
 .con{
-    padding-top: 150px;
+    padding-top: 100px;
     padding-left: 5%;
     display: grid;
     grid-template-columns: 450px 450px 450px 450px;
@@ -8,6 +8,13 @@
     width: 350px;
     padding-left: 10%;
 }
-.пиписька{
+.abc{
     padding-left: 50%
+}
+.con1{
+    padding-bottom: 300px;
+    padding-top: 100px;
+    padding-left: 5%;
+    display: grid;
+    grid-template-columns: 450px 450px 450px 450px;
 }

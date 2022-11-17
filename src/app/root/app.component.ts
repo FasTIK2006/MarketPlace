@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'; 
 
 @Component({
   selector: 'app-root',
@@ -9,9 +9,6 @@ export class AppComponent {
   title(title: any) {
     throw new Error('Method not implemented.');
   }
-  name: string = '';
-  surname: string = '';
-  private val: string = 'Enter your Name';
 
   isLogged: boolean = false;
   Username: string = '';
@@ -32,19 +29,12 @@ export class AppComponent {
   }
 
   logout(): void {
-    localStorage.clear()
+    // localStorage.clear()
     this.Username = '';
     this.isLogged = false;
   }
 
 
-
-  temp() {}
-
-    }
-
-  
-
-    let t: boolean = true;
+};
 
 
