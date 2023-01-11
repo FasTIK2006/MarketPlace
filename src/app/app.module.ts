@@ -6,6 +6,10 @@ import { AppComponent } from './root/app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { PostsComponent } from './catalog/posts.component';
+import { ProfileComponent } from './profile/profile.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { LogoutComponent } from './logout/logout.component';
+import { AuthGuard } from './guards/AuthGuard';
 
 @NgModule({
   declarations: [
@@ -13,13 +17,16 @@ import { PostsComponent } from './catalog/posts.component';
     LoginComponent,
     RegisterComponent,
     PostsComponent,
+    ProfileComponent,
+    NotFoundComponent,
+    LogoutComponent,
     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

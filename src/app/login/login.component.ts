@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,10 +12,12 @@ export class LoginComponent implements OnInit {
   incorrectPassword: boolean = false;
   incorrectMail: boolean = false;
   entrance = false;
-  constructor() { }
+  constructor(public authService: AuthService) {}
+    
+  
 
   ngOnInit(): void { }
-  enter(): void {
+  login(): void {
     let user_str = localStorage.getItem("userinfo")
     if (user_str !== null) {
     } else {
@@ -32,7 +35,9 @@ export class LoginComponent implements OnInit {
       this.incorrectPassword = true;
       return;
     }
+    this.authService.login();
     alert("Вы успешно вошли")
   }
 }
+
 

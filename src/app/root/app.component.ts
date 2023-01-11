@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'; 
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent {
   isLogged: boolean = false;
   Username: string = '';
 
-  constructor() {
+  constructor(public authService: AuthService) {
     this.checkUser();
   }
 
@@ -29,7 +30,6 @@ export class AppComponent {
   }
 
   logout(): void {
-    // localStorage.clear()
     this.Username = '';
     this.isLogged = false;
   }

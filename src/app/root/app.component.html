@@ -11,76 +11,35 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarContent">
-          <ul class="navbar-nav me-auto me-2">
-            <li class="nav-item">
-
-
-            </li>
+          <ol class="navbar-nav me-auto me-2">
             <li class="nav-item">
               <a class="ab" routerLink="/" routerLinkActive="active-link"
                 [routerLinkActiveOptions]="{ exact: true }">Каталог</a>
             </li>
             <li class="nav-item">
-              <a class="ab " *ngIf="!isLogged" routerLink="/login" routerLinkActive="active-link">Вход</a>
+              <a class="ab " *ngIf="!authService.isLoggedIn()" routerLink="/login" routerLinkActive="active-link">Вход</a>
             </li>
             <li class="nav-item">
-              <a class="ab " *ngIf="!isLogged" routerLink="/register" routerLinkActive="active-link">Регистрация</a>
+              <a class="ab " mat-button *ngIf="!authService.isLoggedIn()" routerLink="/register" routerLinkActive="active-link">Регистрация</a>
             </li>
             <li class="nav-item">
               <a href="/" class="ab " *ngIf="!isLogged" button (click)="checkUser()">Обновить страницу </a>
             </li>
-
+            <div class="c">
             <li class="nav-item">
-              <a class="ab" *ngIf="isLogged" (click)="logout()">Выйти из аккаунта: {{Username}} </a>
+              <a class="ab" *ngIf="authService.isLoggedIn()" (click)="logout()">Выйти из аккаунта: {{Username}} </a>
             </li>
-          </ul>
-          
-          <button type="button g-4" class="btn btn-outline-danger i">8(800)555-35-35</button>
+            <li class="nav-item">
+              <a class="ab" *ngIf="authService.isLoggedIn()" routerLink="/profile" routerLinkActive="active-link"> Профиль </a>
+            </li>
+          </div>
+          </ol>
+
+
         </div>
       </div>
     </nav>
     <router-outlet></router-outlet>
 
   </div>
-  <div class="bg-warning text-dark pt 5 pb 4 footer">
-    <div class="container text-center text-md-left">
-      <div class="row text-center text-md-left">
-        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-4">
-          <h5 class="text-uppercase mb-4 font-weight-bold text-dark">Moscow</h5>
-          <p>Michurinskiy prospekt 27,<br>
-            area Ramenki 17.11.2022<br>
-            info@mail.ru</p>
-          <a href="#" class="btn btn-outline-danger ">
-            <h5>8(800)555-35-35</h5>
-          </a>
-        </div>
-        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-4">
-          <h5 class="text-uppercase mb-4 font-weight-bold text-dark">Russia</h5>
-          <p>Michurinskiy prospekt 27,<br>
-            area Ramenki 17.11.2022<br>
-            info@mail.ru</p>
-          <a href="#" class="btn btn-outline-danger ">
-            <h5>8(800)555-35-35</h5>
-          </a>
-        </div>
-
-
-
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h5 class="text-uppercase mb-4 font-weight-bold text-dark">Stay Connected</h5>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Enter your mail" aria-label="Search">
-            <button class="btn btn-outline-danger" type="submit">Sign Up</button>
-          </form>
-          <p class="my-2">Stay connect with us to get exclusive offer!</p>
-        </div>
-        <hr class="mb-4">
-        <div class="row align-items-center">
-          <div class="col-md-7 col-lg-8 ">
-            <p>☺ 2022 – 2022 «ООО MarketPlace». Все права защищены.
-
-            </p>
-          </div>
-
-        </div>
-      </div>
+  
