@@ -30,6 +30,7 @@ export class AppComponent {
   }
 
   logout(): void {
+     localStorage.clear()
     this.Username = '';
     this.isLogged = false;
   }
