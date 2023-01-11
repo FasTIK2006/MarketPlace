@@ -1,6 +1,6 @@
 <body>
   <div>
-    <nav class="fixed-top navbar navbar-expand-xl navbar-primary bg-warning">
+    <nav class="fixed-top navbar navbar-expand-xl navbar-primary bg-success">
       <div class="container">
         <a href="" class="navbar-brand">
           <h1>Marketplace</h1>
@@ -22,17 +22,12 @@
             <li class="nav-item">
               <a class="ab " mat-button *ngIf="!authService.isLoggedIn()" routerLink="/register" routerLinkActive="active-link">Регистрация</a>
             </li>
-            <li class="nav-item">
-              <a href="/" class="ab " *ngIf="!isLogged" button (click)="checkUser()">Обновить страницу </a>
-            </li>
             <div class="c">
-            <li class="nav-item">
-              <a class="ab" *ngIf="authService.isLoggedIn()" (click)="logout()">Выйти из аккаунта: {{Username}} </a>
-            </li>
             <li class="nav-item">
               <a class="ab" *ngIf="authService.isLoggedIn()" routerLink="/profile" routerLinkActive="active-link"> Профиль </a>
             </li>
           </div>
+          <app-logout>  </app-logout>
           </ol>
 
 

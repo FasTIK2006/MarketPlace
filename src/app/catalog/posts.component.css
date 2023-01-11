@@ -1,6 +1,6 @@
 
 .con{
-    padding-top: 100px;
+    padding-top: 150px;
     padding-left: 5%;
     display: grid;
     grid-template-columns: 450px 450px 450px 450px;
@@ -21,7 +21,7 @@
 
 }
 .con1{
-    padding-bottom: 300px;
+    padding-bottom:300px;
     padding-top: 100px;
     padding-left: 5%;
     display: grid;
@@ -34,4 +34,7 @@
 }
 .img{
     padding: 1% 5% 7% 8%;
+}
+.footer{
+    margin-top:  100px;
 }

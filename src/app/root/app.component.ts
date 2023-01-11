@@ -7,35 +7,12 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title(title: any) {
-    throw new Error('Method not implemented.');
-  }
-
-  isLogged: boolean = false;
+  title = 'MARKETPLACE';
   Username: string = '';
-
-  constructor(public authService: AuthService) {
-    this.checkUser();
+  constructor(public authService: AuthService) { }
   }
 
-  checkUser(): void {
-    let user_str = localStorage.getItem('userinfo');
-    if (user_str === null) {
-      return;
-    } else {
-      let user = JSON.parse(user_str);
-      this.Username = user.name;
-      this.isLogged = true;
-    }
-  }
+  
 
-  logout(): void {
-     localStorage.clear()
-    this.Username = '';
-    this.isLogged = false;
-  }
-
-
-};
 
 
