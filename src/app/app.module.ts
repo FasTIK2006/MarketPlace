@@ -10,6 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LogoutComponent } from './logout/logout.component';
 import { AuthGuard } from './guards/AuthGuard';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AuthGuard } from './guards/AuthGuard';
     ProfileComponent,
     NotFoundComponent,
     LogoutComponent,
+    CartComponent,
     ],
   imports: [
     BrowserModule,

@@ -17,6 +17,10 @@
                 [routerLinkActiveOptions]="{ exact: true }">Каталог</a>
             </li>
             <li class="nav-item">
+              <a class="ab" routerLink="/cart" routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }">Корзина</a>
+            </li>
+            <li class="nav-item">
               <a class="ab " *ngIf="!authService.isLoggedIn()" routerLink="/login" routerLinkActive="active-link">Вход</a>
             </li>
             <li class="nav-item">
